@@ -14,6 +14,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:ro
+<<<<<<< HEAD
   nginx:
     image: nginx
     ports:
@@ -26,3 +27,5 @@ services:
       - app
     depends_on:
       - app
+=======
+>>>>>>> master
