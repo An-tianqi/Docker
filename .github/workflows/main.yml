@@ -25,4 +25,4 @@ jobs:
           pip install -r ./app/requirements.txt
 
       - name: Start Backend Server
-        run: docker-compose up --build
+        run: python -m build
