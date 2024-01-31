@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  fastapi-run:
+  flask-run:
     runs-on: ubuntu-20.04
 
     steps:
