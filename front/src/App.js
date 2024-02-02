@@ -11,11 +11,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="http://localhost:5000"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Redirection à l'application Flask
         </a>
       </header>
     </div>
