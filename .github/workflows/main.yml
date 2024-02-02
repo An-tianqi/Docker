@@ -1,4 +1,4 @@
-name: Flask run 
+name: FlaskTest run 
 
 on:
   push:
@@ -7,23 +7,23 @@ on:
     branches: [ "main" ]
 
 jobs:
-  flask-run:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Check out code
+        uses: actions/checkout@v2
 
-      - name: Set up Python
+      - name: Set up Python 3.10
         uses: actions/setup-python@v2
         with:
-          python-version: '3.7'
+          python-version: '3.10'
 
-      - name: Install Backend Dependencies
+      - name: Install dependencies
         run: |
+          pip install requests
           python -m pip install --upgrade pip
           pip install -r app/requirements.txt
 
-      - name: Start Backend Server 
-        working-directory: ./app
+      - name: Run Flask tests
+        working-directory: app
         run: pytest test_app.py
