@@ -24,5 +24,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./app/requirements.txt
 
-      - name: Start Backend Server
-        run: python -m build
+      - name: Start Backend Server 
+        cd app
+        run: pytest test_app.py
