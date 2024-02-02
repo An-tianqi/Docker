@@ -25,5 +25,5 @@ jobs:
           pip install -r ./app/requirements.txt
 
       - name: Start Backend Server 
-          cd app
-          run: pytest test_app.py
+        working-directory: app
+        run: pytest test_app.py
